@@ -8,20 +8,20 @@ part of 'dummy_item_model.dart';
 
 DummyItemModel _$DummyItemModelFromJson(Map<String, dynamic> json) =>
     DummyItemModel(
-      json['idMeal'] as String?,
-      json['strCategory'] as String?,
-      json['strArea'] as String?,
-      json['strInstructions'] as String?,
-      json['strMealThumb'] as String?,
-      json['strMeal'] as String?,
+      json['idTeam'] as String?,
+      json['strTeam'] as String?,
+      json['strTeamAlternate'] as String?,
+      json['strBadge'] as String?,
+      json['strDescriptionEN'] as String?,
+      json['strLeague'] as String?,
     );
 
 Map<String, dynamic> _$DummyItemModelToJson(DummyItemModel instance) =>
     <String, dynamic>{
-      'idMeal': instance.idMeal,
-      'strCategory': instance.strCategory,
-      'strArea': instance.strArea,
-      'strInstructions': instance.strInstructions,
-      'strMealThumb': instance.strMealThumb,
-      'strMeal': instance.strMeal,
+      'idTeam': instance.idTeam,
+      'strTeam': instance.strTeam,
+      'strTeamAlternate': instance.strTeamAlternate,
+      'strDescriptionEN': instance.strDescriptionEN,
+      'strBadge': instance.strBadge,
+      'strLeague': instance.strLeague,
     };

@@ -33,11 +33,11 @@ class _DummyScreenState extends State<DummyScreen> {
   PreferredSizeWidget _appBar() {
     return AppBar(
       title: const Text(
-        "Home",
+        "List Team",
         style: TextStyle(color: Colors.white),
       ),
       centerTitle: true,
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.blue,
     );
   }
 
@@ -52,11 +52,11 @@ class _DummyScreenState extends State<DummyScreen> {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
           child: DummyItemWidget(
-            dummyItemModel: listDummy.meals?[index],
+            dummyItemModel: listDummy.teams?[index],
           ),
         );
       },
-      itemCount: listDummy.meals?.length ?? 0,
+      itemCount: listDummy.teams?.length ?? 0,
     );
   }
 

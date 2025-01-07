@@ -14,7 +14,7 @@ class DummyItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async =>
-          Get.toNamed(AppRoute.detailScreen, arguments: dummyItemModel?.idMeal),
+          Get.toNamed(AppRoute.detailScreen, arguments: dummyItemModel?.idTeam),
       child: Container(
         width: MediaQuery.sizeOf(context).width,
         height: MediaQuery.sizeOf(context).height / 7,
@@ -38,7 +38,7 @@ class DummyItemWidget extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: CachedNetworkImage(
-                imageUrl: dummyItemModel?.strMealThumb ?? AppConst.imageExample,
+                imageUrl: dummyItemModel?.strBadge ?? AppConst.imageExample,
                 width: 80,
                 height: 80,
                 fit: BoxFit.cover,
@@ -58,7 +58,7 @@ class DummyItemWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    dummyItemModel?.strMeal ?? "-",
+                    dummyItemModel?.strTeam ?? "-",
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -69,7 +69,7 @@ class DummyItemWidget extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    dummyItemModel?.strCategory ?? "Type of Meal",
+                    dummyItemModel?.strLeague ?? "Type of Meal",
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,

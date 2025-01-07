@@ -16,7 +16,7 @@ class DummyItemController extends GetxController {
   void onInit() {
     super.onInit();
     idDummyItem.value = Get.arguments ?? "";
-    _logger.i("Id Meal : ${idDummyItem.value}");
+    _logger.i("Id Team : ${idDummyItem.value}");
     if (idDummyItem.value.isNotEmpty) {
       _loadDummyItem();
     }

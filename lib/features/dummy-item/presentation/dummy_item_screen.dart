@@ -33,11 +33,11 @@ class _DummyItemScreenState extends State<DummyItemScreen> {
   PreferredSizeWidget _appBar() {
     return AppBar(
       title: const Text(
-        "Detail Dummy Data",
+        "Detail Team",
         style: TextStyle(color: Colors.white),
       ),
       centerTitle: true,
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.blue,
     );
   }
 
@@ -76,7 +76,7 @@ class _DummyItemScreenState extends State<DummyItemScreen> {
             borderRadius:
                 const BorderRadius.vertical(bottom: Radius.circular(24)),
             child: CachedNetworkImage(
-              imageUrl: dummyModel?.meals?.first.strMealThumb ??
+              imageUrl: dummyModel?.teams?.first.strBadge ??
                   AppConst.imageExample,
               width: double.infinity,
               height: 250,
@@ -95,7 +95,7 @@ class _DummyItemScreenState extends State<DummyItemScreen> {
               children: [
                 // Nama Makanan
                 Text(
-                  dummyModel?.meals?.first.strMeal ?? "Name Of Meal",
+                  dummyModel?.teams?.first.strTeam ?? "Name Of Team",
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class _DummyItemScreenState extends State<DummyItemScreen> {
                 const SizedBox(height: 8),
                 // Tipe Makanan
                 Text(
-                  dummyModel?.meals?.first.strCategory ?? "Type Of Meal",
+                  dummyModel?.teams?.first.strTeamAlternate ?? "Type Of Team",
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
@@ -116,7 +116,7 @@ class _DummyItemScreenState extends State<DummyItemScreen> {
 
                 // Deskripsi
                 Text(
-                  dummyModel?.meals?.first.strInstructions ?? "Description",
+                  dummyModel?.teams?.first.strDescriptionEN ?? "Description",
                   style: const TextStyle(
                     fontSize: 16,
                     color: Colors.black87,

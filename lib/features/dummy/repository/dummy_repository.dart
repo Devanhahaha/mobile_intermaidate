@@ -19,6 +19,7 @@ class DummyRepository extends BaseRepository {
       final DummyModel dummyData = DummyModel.fromJson(json);
 
       _logger.i(apiResponse);
+      _logger.i(dummyData.teams?.first.strBadge);
       response.onSuccess(dummyData);
       response.onDone.call();
     } catch (e) {

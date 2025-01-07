@@ -7,12 +7,12 @@ part of 'dummy_model.dart';
 // **************************************************************************
 
 DummyModel _$DummyModelFromJson(Map<String, dynamic> json) => DummyModel(
-      (json['meals'] as List<dynamic>?)
+      (json['teams'] as List<dynamic>?)
           ?.map((e) => DummyItemModel.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$DummyModelToJson(DummyModel instance) =>
     <String, dynamic>{
-      'meals': instance.meals,
+      'teams': instance.teams,
     };
